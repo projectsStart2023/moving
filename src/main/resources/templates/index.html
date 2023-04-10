@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:sec="http://www.thyemleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>홈</title>
+</head>
+<body>
+	<a sec:authorize="not isAuthenticated()" th:href="@{/user/signIn}"> 로그인</a>
+	<a sec:authorize="not isAuthenticated()" th:href="@{/user/signUp}"> 회원가입</a>
+	
+	<h2 sec:authorize="isAuthenticated()">[[${#authentication.name}]]님, 환영합니다!</h2>
+
+</body>
+</html>
