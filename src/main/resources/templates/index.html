@@ -4,12 +4,25 @@
 <head>
 <meta charset="UTF-8">
 <title>홈</title>
+<link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
+
 <body>
-	<a sec:authorize="not isAuthenticated()" th:href="@{/user/signIn}"> 로그인</a>
-	<a sec:authorize="not isAuthenticated()" th:href="@{/user/signUp}"> 회원가입</a>
+	<!-- 로그인 전 -->
+	<div id="btnbox">
+		<h1 sec:authorize="not isAuthenticated()">MOVING🍿</h1>
+		<h2 sec:authorize="not isAuthenticated()">로그인을 하여주세요</h2>
+	    <a sec:authorize="not isAuthenticated()" th:href="@{/user/signUp}" class="button btn">회원가입</a>
+	    <a sec:authorize="not isAuthenticated()" th:href="@{/user/signIn}" class="button btn">로그인</a>	
+	</div>
 	
-	<h2 sec:authorize="isAuthenticated()">[[${#authentication.name}]]님, 환영합니다!</h2>
+	<!-- 로그인 후 -->
+	<div class="welcome">
+		<h1 sec:authorize="isAuthenticated()">MOVING🍿</h1>
+		<h2 sec:authorize="isAuthenticated()">[[${#authentication.name}]]님, 환영합니다!</h2>
+		<a sec:authorize="isAuthenticated()" th:href="@{/movie/home}" class="button btn">영화홈 가기</a>
+		<a sec:authorize="isAuthenticated()" href="#" class="button btn">로그아웃</a>
+	</div>
 
 </body>
 </html>

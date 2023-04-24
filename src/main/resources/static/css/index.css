@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+
+body {
+	height: 100vh;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* 안내문구 */
+h1{
+	color: #fff;
+	font-family: 'Silkscreen', cursive;
+}
+h2 {
+	color: #fff;
+}
+
+/* 버튼일괄 */
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 30px;
+  transition: all 0.2s ;
+}
+
+.btn {
+	background: #f74518;
+}
+

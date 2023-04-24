@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:sec="http://www.thyemleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/movie.css}">
+</head>
+
+<body>
+
+<div class="top">
+	<h1>MOVING🍿</h1>
+	<a sec:authorize="isAuthenticated()" th:href="@{/logout}" class="button btn">로그아웃 │ </a>
+	<a sec:authorize="isAuthenticated()" th:href="@{/movie/movie}" class="button btn">영화 홈</a>
+</div>
+
+<p style="color: #fff;">님의 프로필 입니다. </p>
+
+</body>
+</html>
