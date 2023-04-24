@@ -10,6 +10,7 @@
 	<a sec:authorize="not isAuthenticated()" th:href="@{/user/signUp}"> 회원가입</a>
 	
 	<h2 sec:authorize="isAuthenticated()">[[${#authentication.name}]]님, 환영합니다!</h2>
-
+	<a sec:authorize="isAuthenticated()" th:href="@{/user/logout"> 로그아웃</a>
+	<a sec:authorize="isAuthenticated()" th:href="@{/user/info"> 회원정보</a>
 </body>
 </html>
