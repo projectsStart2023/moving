@@ -21,7 +21,7 @@
 		<h1 sec:authorize="isAuthenticated()">MOVING🍿</h1>
 		<h2 sec:authorize="isAuthenticated()">[[${#authentication.name}]]님, 환영합니다!</h2>
 		<a sec:authorize="isAuthenticated()" th:href="@{/movie/home}" class="button btn">영화홈 가기</a>
-		<a sec:authorize="isAuthenticated()" th:href="@{/user/info"> 회원정보</a>
+		<a sec:authorize="isAuthenticated()" th:href="@{/user/info}"> 회원정보</a>
 		<a sec:authorize="isAuthenticated()" href="#" class="button btn">로그아웃</a>
 	</div>
 

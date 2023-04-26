@@ -29,11 +29,8 @@
 	<h2>넷플릭스</h2>
 	<ul class="ul_icon">
         <li th:each="Netflix_movie:${list}" class="box">
-            <label><img th:src="@{http://image.tmdb.org${Netflix_movie.poster}}"></label>
+            <label><a><img src="#" th:src="@{*{Netflix_movie.poster_path}}"></a></label>
             <span id="title">[[ ${Netflix_movie.title} ]]</span>
-            <!-- <span id="title">http://image.tmdb.org[[ ${Netflix_movie.poster} ]]</span> -->
-            <!-- <a><img alt="" src="http://image.tmdb.org/t/p/w94_and_h141_bestv2/tNWCukAMubqisamYURvo5jw61As.jpg"></a> -->
-            
         </li>
     </ul>
 </section>

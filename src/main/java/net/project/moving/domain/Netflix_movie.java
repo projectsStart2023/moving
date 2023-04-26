@@ -12,6 +12,7 @@ import lombok.ToString;
 @ToString
 public class Netflix_movie {
 	private String title;
+	private String poster_path;
 	private String poster;
 	private String release_date;
 	private String over_view;
