@@ -21,6 +21,7 @@ public class MovieController {
 		List<Netflix_movie> list = movieService.netflixmovielist();
 		// 모델에 리스트 저장
 		model.addAttribute("list", list);
+		System.out.println(list);
 		return "/movie/home";
 	}
 	

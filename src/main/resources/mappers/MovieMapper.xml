@@ -7,7 +7,7 @@
 	<select id="netflixmovielist" resultType="Netflix_movie">
 		SELECT
 			title,
-			poster
+			poster_path
 		FROM
 			netflix_movie
 	</select>
